@@ -59,6 +59,9 @@ L.Path = L.Path.extend({
 	},
 
 	_initStyle: function () {
+		if (this.options.title) {
+			this._path.setAttribute('data-title', this.options.title);
+		}
 		if (this.options.stroke) {
 			this._path.setAttribute('stroke-linejoin', 'round');
 			this._path.setAttribute('stroke-linecap', 'round');
@@ -76,6 +79,9 @@ L.Path = L.Path.extend({
 	},
 
 	_updateStyle: function () {
+		if (this.options.title) {
+			this._path.setAttribute('data-title', this.options.title);
+		}
 		if (this.options.stroke) {
 			this._path.setAttribute('stroke', this.options.color);
 			this._path.setAttribute('stroke-opacity', this.options.opacity);
