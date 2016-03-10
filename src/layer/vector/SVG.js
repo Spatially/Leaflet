@@ -85,6 +85,8 @@ L.SVG = L.Renderer.extend({
 
 		if (!path) { return; }
 
+		path.setAttribute('data-title', options.title);
+
 		if (options.stroke) {
 			path.setAttribute('stroke', options.color);
 			path.setAttribute('stroke-opacity', options.opacity);
